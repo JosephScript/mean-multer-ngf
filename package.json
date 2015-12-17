@@ -4,7 +4,8 @@
   "description": "A MEAN stack example of how to upload a file from a form in Angular JS using ngFileupload, and saving the file to a folder using Multer in Express/Node.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,11 @@
   "dependencies": {
     "angular": "^1.4.8",
     "angular-material": "^1.0.0",
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
     "mongoose": "^4.3.1",
+    "morgan": "^1.6.1",
     "multer": "^1.1.0",
     "ng-file-upload": "^10.1.9"
   }

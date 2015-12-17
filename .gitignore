@@ -76,3 +76,5 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 
+# Vendor scripts copied from gulpfile.js
+/public/vendor/
