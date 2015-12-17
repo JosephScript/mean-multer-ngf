@@ -53,7 +53,7 @@ router.post('/', upload.single('file'), function (req, res, next) {
     if (err) {
       next(err);
     } else {
-      res.redirect('/');
+      res.send(newUpload);
     }
   });
 });
