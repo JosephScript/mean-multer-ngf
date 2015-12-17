@@ -78,3 +78,6 @@ crashlytics-build.properties
 
 # Vendor scripts copied from gulpfile.js
 /public/vendor/
+
+# multer uploads
+uploads/
