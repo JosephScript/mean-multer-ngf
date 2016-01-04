@@ -21,7 +21,7 @@ router.get('/', function (req, res, next) {
  * Gets a file from the hard drive based on the unique ID and the filename
  */
 router.get('/:uuid/:filename', function (req, res, next) {
-  console.log(req.params.filename);
+  console.log(req.params);
   Upload.findOne({
     'file.filename': req.params.uuid,
     'file.originalname': req.params.filename
