@@ -1,3 +1,5 @@
+# Angular File Uploads
+
 Surprisingly, uploading files can be a difficult task for someone new to the MEAN stack. Documentation is sparse or esoteric, and few simple examples exist. Some of them only deal with forms using a full post back and aren't fully Angular. 
 
 This is an attempt to help!
@@ -404,3 +406,7 @@ Here you can see we're actually requiring the route `/:uuid/:filename`, which is
 From the database we can get the original filename (which we also already have from the params), and also the mimetype of the file so that the browser knows how to handle it. We're setting the content tuype and disposition to match these.
 
 Finally using fs we pipe the read stream into the response which initiates download of the file.
+
+## Extras
+
+If you check the files you will also see a few extras. I've included some common error handlers that should prevent you from crashing your application when something bad happens. These are a ncie to have.
