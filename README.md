@@ -195,7 +195,6 @@ We're going to build an upload form that has a name field and a file picker. You
 ```html
 <div ng-controller="formCtrl">
   <h1>This is a MEAN stack file upload example!</h1>
-
   <form ng-submit="submit()">
     <legend>Upload a new file here:</legend>
     <label for="name">Name:</label>
@@ -407,6 +406,10 @@ From the database we can get the original filename (which we also already have f
 
 Finally using fs we pipe the read stream into the response which initiates download of the file.
 
-## Extras
+## Error Handling
 
 If you check the files you will also see a few extras. I've included some common error handlers that should prevent you from crashing your application when something bad happens. These are a ncie to have.
+
+## Production
+
+In production you most likely would not be saving files directly to disk. Instead, you would use Multer to save the files to some other file server. For example, you can use [multer-s3](https://www.npmjs.com/package/multer-s3) to store your files on an inexpensive Amazon S3 Bucket, and then download them using the [aws-sdk](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/index.html). The easiest way is to use the [getObject](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#getObject-property) method, and to pipe the data into the response in express. 
